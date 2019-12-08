@@ -1,9 +1,9 @@
 package ph.marupork.finance.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import ph.marupork.finance.entity.BalanceSheet;
 
-import javax.persistence.Id;
-
-public interface BalanceSheetRepository extends JpaRepository<BalanceSheet, Id> {
+@Repository
+public interface BalanceSheetRepository extends JpaRepository<BalanceSheet, Long> {
 }

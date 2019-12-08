@@ -4,24 +4,9 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns="http://www.liquibase.org/xml/ns/dbchangelog">
 
-    <changeSet author="marupork" id="201907121038_01">
-        <comment>create table script</comment>
-        <sqlFile path="src/main/resources/db/sql/create.sql"></sqlFile>
-    </changeSet>
-
-    <changeSet author="marupork" id="201907121038_02">
-        <comment>create procedure script</comment>
-        <sqlFile path="src/main/resources/db/sql/UpdateAssetAmount-proc.sql" splitStatements="false" endDelimiter=";"></sqlFile>
-        <sqlFile path="src/main/resources/db/sql/UpdateAssetGroupAmount-proc.sql" splitStatements="false" endDelimiter=";"></sqlFile>
-        <sqlFile path="src/main/resources/db/sql/UpdateLiabilityAmount-proc.sql" splitStatements="false" endDelimiter=";"></sqlFile>
-    </changeSet>
-
-    <changeSet author="marupork" id="201907121038_03">
-        <comment>create trigger script</comment>
-        <sqlFile path="src/main/resources/db/sql/AfterAssetInsert-trigger.sql" splitStatements="false" endDelimiter=";"></sqlFile>
-        <sqlFile path="src/main/resources/db/sql/AfterAssetUpdate-trigger.sql" splitStatements="false" endDelimiter=";"></sqlFile>
-        <sqlFile path="src/main/resources/db/sql/AfterLiabInsert-trigger.sql" splitStatements="false" endDelimiter=";"></sqlFile>
-        <sqlFile path="src/main/resources/db/sql/AfterLiabUpdate-trigger.sql" splitStatements="false" endDelimiter=";"></sqlFile>
+    <changeSet  id="201907121038_01" author="marupork">
+        <comment>schema creation script</comment>
+        <sqlFile path="src/main/resources/db/sql/schema.sql" endDelimiter="/;"></sqlFile>
     </changeSet>
 
 </databaseChangeLog>

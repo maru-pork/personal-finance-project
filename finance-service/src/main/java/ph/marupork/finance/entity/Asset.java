@@ -9,11 +9,11 @@ import ph.marupork.finance.enums.AssetType;
 import javax.persistence.*;
 import java.math.BigDecimal;
 
-@Entity
-@Table(name = "Assets")
 @Getter
 @Setter
 @NoArgsConstructor
+@Entity
+@Table(name = "Assets")
 public class Asset {
 
     @Id
